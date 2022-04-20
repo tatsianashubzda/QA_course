@@ -1,0 +1,85 @@
+
+1) Посмотреть где я						*** pwd
+
+2) Создать папку						*** mkdir Q1
+
+3) Зайти в папку						*** cd Q1
+				
+4) Создать 3 папки						*** mkdir A1 A2 A3
+
+5) Зайти в любую папку						*** cd A1
+
+6) Создать 5 файлов (3 txt, 2 json)				*** touch f1.txt f2.txt f3.txt ff1.json ff2.json
+cat
+7) Создать 3 папки						*** mkdir W1 W2 W3
+
+8. Вывести список содержимого папки				*** ls -la
+
+9) + Открыть любой txt файл					*** vim f1.txt
+
+10) + написать туда что-нибудь, любой текст.			*** i
+										write something
+										and something else
+
+11) + сохранить и выйти						*** ESC   :wq
+	
+12) Выйти из папки на уровень выше				*** cd ..
+
+				
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку				*** mv A1/f2.txt A1/ff2.json A2
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.			*** cp A1/f1.txt A1/ff1.json A3
+
+15) Найти файл по имени										*** find /d/QA_Free_VK_course -name "f1.txt"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает		*** less +F A1/f1.txt  (q - выйти)
+
+17) вывести несколько первых строк из текстового файла						*** head -n 3 A1/f1.txt
+
+18) вывести несколько последних строк из текстового файла					*** tail -n 3 A1/f1.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает		*** less A1/f1.txt
+
+20) вывести дату и время									*** date									
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+***  
+curl http://162.55.220.72:5005/terminal-hw-request 
+			 % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 			Dload  Upload   Total   Spent    Left  Speed
+			100   237  100   237    0     0   2704      0 --:--:-- --:--:-- --:--:--  2755{"Intro
+			":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the n
+			ext URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=
+			(set_your_number)","result":["Your_String","Your_number"]}}
+
+ curl "http://162.55.220.72:5005/get_method?name=Tanya&age=120"
+		 	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 			Dload  Upload   Total   Spent    Left  Speed
+100    20  100    20    0     0     71      0 --:--:-- --:--:-- --:--:--    71["Tanya","120"]
+	
+	
+
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+***
+cat >>myscript.sh
+
+#!/bin//sh
+cd Q1
+mkdir A1 A2 A3
+cd A1
+touch f1.txt f2.txt f3.txt ff1.json ff2.json
+mkdir W1 W2 W3
+ls -la
+cd ..
+mv A1/f2.txt A1/ff2.json A2
+
+./ myscript.sh
+
