@@ -5,22 +5,26 @@ e.g. function getWordStructure(word)
 Слово (word) состоит из  (число) гласных и (число) согласных букв */
 
 
-getWordStructure = function (Word) {
+getWordStructure = function (word) {
     const vowel = 'euioaуеыаоэяию';
     let countСonsonant = 0;
     let countVowel = 0;
     let i = 0;
 
-    while (i < Word.toLowerCase().length) {
-        if (vowel.includes(Word.toLowerCase()[i]))
+    while (i < word.toLowerCase().length) {
+        if (vowel.includes(word.toLowerCase()[i]))
             countVowel++
-        else countСonsonant++
+        else
+            if (word.toLowerCase()[i] != '-')
+                countСonsonant++
         i++
     }
-    console.log('В слове "' + Word + '" ' + countVowel + ' гласных и ' + countСonsonant + ' согласных')
+    console.log('В слове "' + word + '" ' + countVowel + ' гласных и ' + countСonsonant + ' согласных')
 }
 
 getWordStructure('обороноспособность');
 getWordStructure('fourteen');
 getWordStructure('Облако');
+getWordStructure('штаб-квартира');
+
 
