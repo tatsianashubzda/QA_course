@@ -1,0 +1,4 @@
+Name - Tatsiana,
+Age - 120,
+Pets - 1,
+Salary - 1500
